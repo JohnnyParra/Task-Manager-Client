@@ -5,8 +5,8 @@ import Navbar from '../../Components/Navbar/Navbar'
 import { Avatar, IconButton } from '@mui/material'
 import { updateAvatarRequest } from '../../ApiServices/TasksService'
 
-import eye from '../../Assets/eye.svg'
-import eyeSlash from '../../Assets/eye-slash.svg'
+import eye from '../../assets/eye.svg'
+import eyeSlash from '../../assets/eye-slash.svg'
 
 import { fetchUser } from '../../ApiServices/TasksService'
 
