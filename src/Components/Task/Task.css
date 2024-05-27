@@ -1,40 +1,40 @@
 .created-task-container{
+  background-color: white;
   display: flex;
   flex-direction: column;
-  background-color: white;
 }
 .created-task-container::after{
+  background: linear-gradient(#e4eaee,#dde4e8);
   content: "";
   display: flex;
   height: 2px;
   width: 100%;
-  background: linear-gradient(#e4eaee,#dde4e8);
 }
 .created-task p {
   display: block !important;
-  white-space: nowrap !important;
   overflow: hidden;
-  width: 115px;
   text-overflow: ellipsis;
+  white-space: nowrap !important;
+  width: 115px;
 }
 .created-task .group-list{
   width: 100%;
 }
 
   .created-task {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
     .created-task button {
       background-color: #03a9f4;
+      border: none;
       color: white;
       height: 40px;
-      width: 100px;
       margin: 5px;
-      border: none;
+      width: 100px;
     }
 
       .created-task button:hover{
@@ -43,26 +43,26 @@
       }
 
     .created-task .left-box {
-      display: flex;
       align-items: center;
-      height: 60px;
       border: 1px solid  rgb(215, 215, 215);
-      flex-grow: 1;
       border-right: none;
+      display: flex;
+      flex-grow: 1;
+      height: 60px;
       width: 40%;
     }
 
       .created-task .left-box .task-input {
-        width: 100%;
         justify-content: center;
+        width: 100%;
       }
       .created-task .left-box .task-input .input{
         width: 90%;
       }
 
       .created-task .left-box .task-dropdown {
-        width: 40%;
         justify-content: center;
+        width: 40%;
       }
 
         .created-task .left-box .task-dropdown .task-drop-btn {
@@ -76,47 +76,47 @@
       }
 
     .created-task .right-box {
-      display: flex;
-      justify-content: space-between;
-      height: 60px;
       align-items: center;
       border: 1px solid  rgb(215, 215, 215);
       border-left: none;
+      display: flex;
       flex-grow: 1;
+      height: 60px;
+      justify-content: space-between;
       width: 60%;
     }
 
       .created-task .right-box .task-time {
-        display: flex;
         align-items: center;
+        display: flex;
         justify-content: center;
         width: 44%;
       }
 
         .created-task .right-box .task-time input {
-          display: flex;
-          justify-content: center;
           align-items: center;
-          height: 35px;
-          margin: 5px;
           border: none;
           cursor: text;
+          display: flex;
           font-family: 'Times New Roman', Times, serif;
+          height: 35px;
+          justify-content: center;
+          margin: 5px;
         }
 
       .created-task .right-box .task-date {
+        align-items: center;
         display: flex;
         justify-content: center;
-        align-items: center;
         width: 24%;
       }
 
       .created-task .right-box .task-elapsed-time {
-        display: flex;
-        width: 32%;
-        justify-content: flex-end;
         align-items: center;
+        display: flex;
+        justify-content: flex-end;
         margin-right: 10px;
+        width: 32%;
       }
 
       .created-task .right-box .options-menu {
@@ -127,9 +127,9 @@
       }
 
     .created-task .input{
+      border: 1px solid transparent;
       height: 35px;
       margin: 5px;
-      border: 1px solid transparent;
       max-width: 98%;
     }
 
@@ -138,14 +138,14 @@
       }
 
       .created-task .input:focus {
-        outline: none;
         border-color: #333;
+        outline: none;
       }
 
     .created-task .group {
+      cursor: pointer;
       display: flex;
       margin: 5px;
-      cursor: pointer;
     }
 
       .created-task .group img {
@@ -160,10 +160,10 @@
     
 
 .created-task .date {
-  height: 35px;
   border: none;
   cursor: text;
   font-family: 'Times New Roman', Times, serif;
+  height: 35px;
 }
 
 .created-task .options {
@@ -171,45 +171,45 @@
 }
 
 .created-task .line-divider {
-  width: 1px;
-  height: 40px;
   border-right: 1px dotted rgb(215, 215, 215);
+  height: 40px;
+  width: 1px;
 }
 
 .created-task .task-dropdown {
-  position: relative; 
   display: inline-block;
+  position: relative; 
 }
 
   .created-task .task-dropdown-input {
-    box-sizing: border-box;
     /* background-image: url('searchicon.png');
     background-position: 14px 12px;
     background-repeat: no-repeat; */
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
     border: none;
     border-bottom: 1px solid  rgb(215, 215, 215);
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
   }
 
   .created-task .task-dropdown-content {
-    display: none;
-    position: absolute;
     background-color: white;
+    border: 1px solid  rgb(215, 215, 215);
+    display: none;
+    height: 170px;
     min-width: 230px;
     overflow: auto;
-    border: 1px solid  rgb(215, 215, 215);
+    position: absolute;
     z-index: 1;
-    height: 170px;
   }
 
     .created-task .task-dropdown-content p {
       color: black;
-      padding: 12px 16px;
-      text-decoration: none;
+      cursor: pointer;
       display: block;
       margin: 0px;
-      cursor: pointer;
+      padding: 12px 16px;
+      text-decoration: none;
     }
 
     .created-task .task-dropdown-content p:hover {
@@ -223,9 +223,9 @@
 }
 
 .created-task .elapsed-time-container {
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   margin-right: 4px;
 }
 
@@ -233,16 +233,16 @@
 @media screen and (max-width: 1200px){
 
   .created-task {
-    height: 100px;
     border: 1px solid  rgb(215, 215, 215);
+    height: 100px;
   }
 
     .created-task .left-box {
-      flex-direction: row;
       /* justify-content: space-between; */
-      width:100%;
-      height: 50%;
       border: none;
+      flex-direction: row;
+      height: 50%;
+      width:100%;
     }
 
       .created-task .left-box .task-input {
@@ -250,33 +250,33 @@
       }
 
       .created-task .left-box .task-dropdown {
-        width: 34%;
         /* margin-top: 12px; */
+        width: 34%;
       }
 
       .created-task .left-box .task-elapsed-time {
         display: flex;
         flex-direction: row;
-        width: 26%;
         justify-content: flex-end;
+        width: 26%;
       }
 
 
     .created-task .right-box{
-      flex-direction: row;
-      width: 100%;
-      height: 50%;
       border-top: 1px solid  rgb(215, 215, 215);
+      flex-direction: row;
+      height: 50%;
+      width: 100%;
     }
 
       .created-task .right-box .task-time {
-        width: 60%;
         height: 50%;
+        width: 60%;
       }
   
       .created-task .right-box .task-date {
-        width: 40%;
         height: 50%;
+        width: 40%;
       }
   
       .created-task .right-box .task-elapsed-time {
@@ -302,9 +302,9 @@
 
   .created-task .right-box{
     flex-direction: row;
-    width: 100%;
     height: 50px;
     margin: 0px;
+    width: 100%;
   }
 
     .created-task .right-box .task-time {

@@ -1,9 +1,9 @@
 html, body {
+  background-color: rgb(242, 246, 248);
+  height: 100vh;
   margin: 0;
   padding: 0;
-  height: 100vh;
   width: 100%;
-  background-color: rgb(242, 246, 248);
 }
 *{
   box-sizing: border-box;
@@ -28,26 +28,26 @@ html, body {
 }
 #dark .sidebar{
   background: rgb(30, 30, 30);
-  color: black;
-  box-shadow: 4px 0px 4px -3px rgb(50, 50, 50);
   border-color:rgb(50, 50, 50);
+  box-shadow: 4px 0px 4px -3px rgb(50, 50, 50);
+  color: black;
 }
 #dark .horizontal-sidebar{
-  box-shadow: 4px 0px 4px -3px rgb(50, 50, 50);
   border-color:rgb(50, 50, 50);
+  box-shadow: 4px 0px 4px -3px rgb(50, 50, 50);
 }
 #dark input{
   background-color: black;
-  color: white;
   border-color: rgb(50, 50, 50);
+  color: white;
   color-scheme: dark;
 } 
 #dark .user{
   color: white;
 }
 #dark .sidebar .group{
-  color: white;
   border-color:rgb(50, 50, 50);
+  color: white;
 }
 #dark .sidebar .group-options-btn{
   color: white;
@@ -118,8 +118,8 @@ html, body {
   background: transparent;
 }
 #dark .all-groups-tasks-container{
-  height: 100%;
   background-color: black;
+  height: 100%;
 }
 #dark .archived-tasks-container{
   background-color: black;

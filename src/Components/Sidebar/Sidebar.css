@@ -1,49 +1,49 @@
 .sidebar{
-  width: 225px;
-  height: 100vh;
+  align-items: center;
   background-color: white;
   border-right: 1px solid  rgb(215, 215, 215);
+  box-shadow: 4px 0px 4px -3px rgb(200, 200, 200);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
-  top: 0px;
-  position: fixed;
-  box-shadow: 4px 0px 4px -3px rgb(200, 200, 200);
+  height: 100vh;
   overflow-y: scroll;
   padding-bottom: 50px;
+  padding-top: 60px;
+  position: fixed;
+  top: 0px;
+  width: 225px;
 }
 
 .sidebar .group-container{
-  display: flex;
-  width: 100%;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .sidebar .group {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 10px 10px;
   border: 1px solid grey;
+  border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin: 10px 10px;
   overflow: hidden;
+  padding: 5px;
+  width: 100%;
 }
 .sidebar .group p{
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   margin: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .sidebar h4 {
-  margin: 10px 0 0 0;
   color: #0192d6;
+  margin: 10px 0 0 0;
 }
 
 .sidebar .group:hover{
@@ -55,8 +55,8 @@
 }
 
 .sidebar .group-options-btn{
-  cursor: pointer;
   color: black;
+  cursor: pointer;
 }
 
 .sidebar .remove-circle-icon{
@@ -66,14 +66,14 @@
 
 @media screen and (max-width: 900px){
   .sidebar{
+    background: linear-gradient(#e4eaee,#dde4e8);
     flex-direction: row;
+    height: 90px;
+    margin: 0;
+    overflow-x: scroll;
+    padding: 0;
     position: relative;
     width: 100vw;
-    margin: 0;
-    padding: 0;
-    height: 90px;
-    overflow-x: scroll;
-    background: linear-gradient(#e4eaee,#dde4e8);
   }
 
   #tasks-sidebar-heading {
@@ -81,13 +81,13 @@
   }
 
   .sidebar .group{
-    min-width: 170px;
     height: 40px;
+    min-width: 170px;
   }
 
   .sidebar h4 {
-    margin: 0;
     color: #0192d6;
+    margin: 0;
   }
 
   .remove-circle-icon{

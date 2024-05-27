@@ -11,27 +11,27 @@
 
 .delete-all-link{
   align-self: flex-start;
-  margin-left: 30px;
   color: #03a9f4;
+  margin-left: 30px;
 }
 
 .task-header{
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   background: linear-gradient(#e4eaee,#dde4e8);
   border: 1px solid #C6D2D9;
+  display: flex;
+  justify-content: space-between;
 }
 
 .task-header .left{
+  flex-grow: 1;
   margin-left: 10px;
   text-align: left;
-  flex-grow: 1;
 }
 
 .task-header .right{
-  display: flex;
   align-items: center;
+  display: flex;
 }
 .task-header p{
   margin: 0;
@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 550px){
   .grouped-tasks-container{
-    transition: 1s;
     margin: 0px 0px 20px 0px;
+    transition: 1s;
   }
 }
