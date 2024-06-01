@@ -18,6 +18,14 @@ export const authenticateUser =  async (user)=> {
   }
 }
 
+export const autoLoginUser =  async ()=> {
+  try {
+    return post(`${API_URL}/autoLogin`);
+  } catch (err) {
+    return { data: [], error: err }
+  }
+}
+
 export const findUser = async ()=> {
   try{
     return get(`${API_URL}/user`)

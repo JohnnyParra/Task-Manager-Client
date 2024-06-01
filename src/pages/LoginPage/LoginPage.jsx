@@ -1,4 +1,4 @@
-import React,{ useState, useContext } from 'react';
+import React,{ useState, useEffect, useContext } from 'react';
 
 // Libraries
 import { useQuery } from 'react-query'
@@ -10,6 +10,7 @@ import { UserContext } from '../../context/UserContext'
 // API Services
 import { setJwt } from '../../ApiServices/JwtService'
 import { authenticateUser } from '../../ApiServices/AuthService'
+import { autoLoginUser } from '../../ApiServices/AuthService';
 
 // Assets
 import eye from '../../assets/eye.svg'
@@ -41,6 +42,34 @@ export default function Login(){
       refetchOnWindowFocus: false,
     }
   );
+
+  // stores backend call that checks user authentication in refetch
+  const {refetch: autoLogin, isRefetching: isRefetchingAutoLogin } = useQuery(
+    ['autoLogin'], 
+    ()=> autoLoginUser(), 
+    {
+      enabled: false,
+      refetchOnWindowFocus: false,
+    }
+  );
+
+  useEffect(() => {
+    const tryAutoLogin = async() => {
+      const token = localStorage.getItem('TaskManagerjwt');
+      if (token) {
+        const loginResponse  = await autoLogin();
+        if (!loginResponse.isError && loginResponse.data.jwt) {
+          const token = loginResponse.data.jwt
+          setJwt(token);
+          const payload = JSON.parse(window.atob(token.split(".")[1]))
+          navigate('/task-manager');
+        } else{
+          setResponseMessage({state: true, error: 'error', msg: 'Sorry, We could not automatically log you in, Please Sign in.'})
+        }
+      }
+    }
+    tryAutoLogin();
+  });
   
 
 // handles Input changes

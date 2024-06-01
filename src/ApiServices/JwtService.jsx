@@ -1,4 +1,4 @@
-const jwtProp = 'chtjwt';
+const jwtProp = 'TaskManagerjwt';
 
 export const setJwt = (token) => {
   localStorage.setItem(jwtProp, token);
